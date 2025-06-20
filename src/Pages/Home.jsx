@@ -1,12 +1,12 @@
 import React from 'react'
-import Header from '../Components/Header';
+import {Header, Planets, Updates} from '../Components';
 import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
 
 export default function Home() {
   return (
-    <div>
+    <div className="font-[Inter] bg-gray-50 overflow-x-hidden">
       <Header />
-      <div className='relative w-dvw h-dvh bg-[url(/galaxy.jpg)] bg-cover bg-center'>
+      <div className='relative w-dvw h-dvh bg-[url(/galaxy.jpg)] bg-cover bg-right'>
         <div className="absolute inset-0 bg-black/60 z-0"></div>
 
         <div className='relative z-10 flex flex-col items-start justify-center h-full space-y-4 px-16'>
@@ -19,6 +19,8 @@ export default function Home() {
           </button>
         </div>
       </div>
+      <Planets/>
+      <Updates />
     </div>
   )
 }

@@ -1,7 +1,7 @@
 @import "tailwindcss";
 @custom-variant dark (&:where(.dark, .dark *));
 
-button {
+a, button {
   cursor: pointer;
 }
 html{

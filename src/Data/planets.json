@@ -4,7 +4,7 @@
     "name": "Mercury",
     "order": "// 01",
     "color": "text-orange-400",
-    "description": "The smallest and closest planet to the Sun, known for its extreme temperature variations.",
+    "description": "The smallest planet, closest to the Sun, with extreme temperature swings.",
     "image": "/planets/mercury.webp"
   },
   {
@@ -12,7 +12,7 @@
     "name": "Venus",
     "order": "// 02",
     "color": "text-yellow-400",
-    "description": "Second from the Sun, Venus has a thick atmosphere that traps heat, making it the hottest planet.",
+    "description": "Thick atmosphere traps heat, making Venus the hottest planet.",
     "image": "/planets/venus.webp"
   },
   {
@@ -20,15 +20,15 @@
     "name": "Earth",
     "order": "// 03",
     "color": "text-blue-400",
-    "description": "The third planet from the Sun and the only astronomical object known to support life.",
+    "description": "The only known planet to support life and liquid water.",
     "image": "/planets/earth.png"
   },
-   {
+  {
     "id": 4,
     "name": "Mars",
     "order": "// 04",
     "color": "text-red-400",
-    "description": "Known as the Red Planet, Mars is home to the tallest volcano and the deepest canyon in the solar system.",
+    "description": "Called the Red Planet, home to the solar system’s tallest volcano.",
     "image": "/planets/mars.png"
   },
   {
@@ -36,7 +36,7 @@
     "name": "Jupiter",
     "order": "// 05",
     "color": "text-yellow-500",
-    "description": "The largest planet in our solar system, Jupiter has a strong magnetic field and dozens of moons.",
+    "description": "The largest planet with strong gravity and over 70 moons.",
     "image": "/planets/jupiter.png"
   },
   {
@@ -44,7 +44,7 @@
     "name": "Saturn",
     "order": "// 06",
     "color": "text-amber-400",
-    "description": "Famous for its stunning ring system, Saturn is a gas giant composed mostly of hydrogen and helium.",
+    "description": "Known for its iconic rings, Saturn is a giant made of gas.",
     "image": "/planets/saturn.png"
   },
   {
@@ -52,7 +52,7 @@
     "name": "Uranus",
     "order": "// 07",
     "color": "text-cyan-400",
-    "description": "An ice giant with a pale blue color, Uranus rotates on its side and has faint rings.",
+    "description": "Pale blue ice giant that spins on its side with faint rings.",
     "image": "/planets/uranus.png"
   },
   {
@@ -60,7 +60,7 @@
     "name": "Neptune",
     "order": "// 08",
     "color": "text-indigo-400",
-    "description": "The farthest known planet from the Sun, Neptune has supersonic winds and a deep blue color.",
+    "description": "Deep blue planet with strong winds, farthest from the Sun.",
     "image": "/planets/neptune.png"
   }
 ]

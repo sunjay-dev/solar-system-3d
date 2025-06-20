@@ -1,12 +1,11 @@
-import { Home, Planets } from "./Pages"
+import { Home } from "./Pages"
 
 function App() {
 
   return (
-   <div className="font-[Inter]">
+   <>
    <Home />
-   <Planets />
-   </div>
+   </>
   )
 }
 
