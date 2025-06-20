@@ -11,6 +11,7 @@ export default function Footer() {
       <a href="#home" className="hover:text-[#2662EC]">Home</a>
       <a href="#planets" className="hover:text-[#2662EC]">Planets</a>
       <a href="#news" className="hover:text-[#2662EC]">News</a>
+      <a href="#subscribe" className="hover:text-[#2662EC]">subscribe</a>
       <a href="mailto:your@email.com" className="hover:text-[#2662EC]">Contact</a>
     </div>
   </div>

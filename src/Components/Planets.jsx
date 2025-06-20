@@ -4,7 +4,7 @@ import InfoOutlineIcon from '@mui/icons-material/InfoOutline';
 
 export default function Planets() {
     return (
-        <div className='min-w-dvw min-h-dvh py-18 md:px-20 px-8 overflow-x-hidden'>
+        <div className='min-w-dvw min-h-dvh py-18 md:px-20 px-8 overflow-x-hidden' id='planets'>
             <span className='bg-gray-100 dark:bg-[#212528] p-3 rounded-sm text-sm'>Solar System</span>
 
             <div className='flex-col flex md:flex-row items-start md:items-center justify-between mt-6 space-y-2'>
