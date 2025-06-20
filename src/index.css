@@ -15,3 +15,8 @@ html{
   -ms-overflow-style: none;  /* IE and Edge */
   scrollbar-width: none;     /* Firefox */
 }
+
+img {
+  user-select: none;
+  -webkit-user-drag: none; /* disables drag on WebKit browsers */
+}

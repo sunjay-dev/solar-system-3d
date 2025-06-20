@@ -10,13 +10,13 @@ export default function Updates() {
             .catch(err => console.error("Error fetching space news:", err));
     }, []);
     return (
-        <section className="py-18 px-20 min-w-dvw min-h-dvh bg-gray-100">
+        <section className="py-18 px-20 min-w-dvw min-h-dvh">
             <h2 className="text-4xl leading-2 font-semibold mt-4 mb-16 text-center">Latest Space News</h2>
 
             <div className="grid grid-cols-2 gap-6">
                 {articles.map(article => (
                     <a key={article.id} href={article.url} target="_blank" rel="noopener noreferrer"
-                        className="hover:scale-105 flex bg-white border border-gray-200 rounded-xl shadow-sm hover:shadow-md transition-all duration-300 overflow-hidden">
+                        className="hover:scale-105 flex bg-white dark:bg-[#212528] rounded-xl shadow-sm hover:shadow-md transition-all duration-300 overflow-hidden">
                         <div className="w-1/3 min-w-[120px]">
                             <img src={article.image_url} alt={article.title} className="w-full h-full object-cover transition-transform duration-300"/>
                         </div>
@@ -28,12 +28,11 @@ export default function Updates() {
                                     year: "numeric",
                                 })}
                             </div>
-                            <h3 className="text-base font-semibold text-gray-800 group-hover:text-blue-600 leading-snug mb-2">{article.title}</h3>
-                            <p className="text-sm text-gray-500 line-clamp-3">{article.summary}</p>
+                            <h3 className="text-base font-semibold group-hover:text-blue-600 leading-snug mb-2">{article.title}</h3>
+                            <p className="text-sm text-gray-500 dark:text-gray-400 line-clamp-3">{article.summary}</p>
                             <div className="mt-3 text-xs text-blue-500 font-medium">{article.news_site}</div>
                         </div>
                     </a>
-
                 ))}
             </div>
         </section>

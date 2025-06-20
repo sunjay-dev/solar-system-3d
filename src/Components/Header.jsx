@@ -1,8 +1,11 @@
 import DarkModeIcon from '@mui/icons-material/DarkMode';
 import LightModeIcon from '@mui/icons-material/LightMode';
 export default function Header() {
+  const toggleMode = () => {
+    document.documentElement.classList.toggle('dark')
+  }
   return (
-    <div className='fixed top-0 z-20 left-0 w-full flex justify-evenly items-center bg-white px-4 py-3'>
+    <div className='fixed top-0 z-20 left-0 w-full flex justify-evenly items-center bg-white dark:bg-gray-900 px-4 py-3'>
     <div className='text-xl font-semibold text-[#2662EC] dark:text-white'>SolarVerse</div>
     <div className='flex items-center justify-space space-x-5'>
     <a className='font-normal'>Home</a>
@@ -11,7 +14,7 @@ export default function Header() {
     <a className='font-normal'>Learn</a>
     </div>
     <div className='flex items-center justify-between space-x-4'>
-    <div>
+    <div onClick={() => toggleMode()}>
     <button className="hidden dark:block"><LightModeIcon fontSize='small' /></button>
     <button className="dark:hidden block"><DarkModeIcon fontSize='small'  /></button>
     </div>

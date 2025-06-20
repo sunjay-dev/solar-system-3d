@@ -1,10 +1,10 @@
 export default function Footer() {
   return (
-    <footer className="my-4">
-  <div className="max-w-6xl mx-auto px-6 py-10 flex flex-col md:flex-row items-center justify-between text-gray-700 space-y-4 md:space-y-0">
+    <footer className="py-4 dark:text-white dark:bg-gray-900">
+  <div className="max-w-6xl mx-auto px-6 py-10 flex flex-col md:flex-row items-center justify-between text-gray-700 dark:text-white space-y-4 md:space-y-0">
     <div className="space-y-2">
-      <h2 className="text-2xl font-semibold text-[#2662EC]">SolarVerse</h2>
-      <p className="text-sm text-gray-500 max-w-sm"> Explore the wonders of our solar system and beyond. Space is just a scroll away.</p>
+      <h2 className="text-2xl font-semibold text-[#2662EC] selection:bg-[#2662EC] dark:text-white">SolarVerse</h2>
+      <p className="text-sm text-gray-500 dark:text-gray-400 max-w-sm"> Explore the wonders of our solar system and beyond. Space is just a scroll away.</p>
     </div>
 
     <div className="flex space-x-5 text-sm">
