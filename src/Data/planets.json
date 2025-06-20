@@ -1,0 +1,66 @@
+[
+  {
+    "id": 1,
+    "name": "Mercury",
+    "order": "// 01",
+    "color": "text-orange-400",
+    "description": "The smallest and closest planet to the Sun, known for its extreme temperature variations.",
+    "image": "/planets/mercury.webp"
+  },
+  {
+    "id": 2,
+    "name": "Venus",
+    "order": "// 02",
+    "color": "text-yellow-400",
+    "description": "Second from the Sun, Venus has a thick atmosphere that traps heat, making it the hottest planet.",
+    "image": "/planets/venus.webp"
+  },
+  {
+    "id": 3,
+    "name": "Earth",
+    "order": "// 03",
+    "color": "text-blue-400",
+    "description": "The third planet from the Sun and the only astronomical object known to support life.",
+    "image": "/planets/earth.png"
+  },
+   {
+    "id": 4,
+    "name": "Mars",
+    "order": "// 04",
+    "color": "text-red-400",
+    "description": "Known as the Red Planet, Mars is home to the tallest volcano and the deepest canyon in the solar system.",
+    "image": "/planets/mars.png"
+  },
+  {
+    "id": 5,
+    "name": "Jupiter",
+    "order": "// 05",
+    "color": "text-yellow-500",
+    "description": "The largest planet in our solar system, Jupiter has a strong magnetic field and dozens of moons.",
+    "image": "/planets/jupiter.png"
+  },
+  {
+    "id": 6,
+    "name": "Saturn",
+    "order": "// 06",
+    "color": "text-amber-400",
+    "description": "Famous for its stunning ring system, Saturn is a gas giant composed mostly of hydrogen and helium.",
+    "image": "/planets/saturn.png"
+  },
+  {
+    "id": 7,
+    "name": "Uranus",
+    "order": "// 07",
+    "color": "text-cyan-400",
+    "description": "An ice giant with a pale blue color, Uranus rotates on its side and has faint rings.",
+    "image": "/planets/uranus.png"
+  },
+  {
+    "id": 8,
+    "name": "Neptune",
+    "order": "// 08",
+    "color": "text-indigo-400",
+    "description": "The farthest known planet from the Sun, Neptune has supersonic winds and a deep blue color.",
+    "image": "/planets/neptune.png"
+  }
+]
