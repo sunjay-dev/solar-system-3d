@@ -28,7 +28,7 @@ export default function PlanetSlider() {
     return (
         <>
             <div className="overflow-x-auto scroll-smooth scrollbar-hide snap-x snap-mandatory mt-14 px-4" ref={scrollRef}>
-                <div className='mt-14 flex items-center w-max gap-5'>
+                <div className='mt-14 flex items-center w-max gap-3 md:gap-5'>
                     {planets.map(planet => {
                         return (
                             <div key={planet.id} className='p-6 w-80 bg-gray-100 dark:bg-[#212528] relative overflow-hidden'>
@@ -50,7 +50,7 @@ export default function PlanetSlider() {
             </div>
 
             <div className="flex items-center justify-between w-full mt-12 px-4">
-                <div className="relative flex-1 h-[2px] bg-gray-300 max-w-xl rounded-full overflow-hidden">
+                <div className="relative flex-1 h-[2px] bg-gray-300 md:max-w-xl rounded-full overflow-hidden">
                     <motion.div
                         className="absolute top-0 left-0 h-full bg-gray-500 rounded-full"
                         style={{ width: `${scrollProgress * 100}%` }}
@@ -59,7 +59,7 @@ export default function PlanetSlider() {
                 </div>
 
                 {/* Arrows */}
-                <div className="space-x-3">
+                <div className="space-x-3 sm:ml-0 ml-2">
                     <button
                         onClick={() => {
                             scrollRef.current.scrollBy({ left: -300, behavior: "smooth" });

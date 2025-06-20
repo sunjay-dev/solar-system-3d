@@ -6,7 +6,7 @@ export default function Home() {
   return (
     <div className="font-[Inter] dark:selection:text-black selection:text-white selection:bg-gray-900 dark:selection:bg-white bg-gray-50 dark:bg-gray-900 dark:text-white text-black overflow-x-hidden">
       <Header />
-      <div className='relative w-dvw h-dvh bg-[url(/galaxy.jpg)] bg-cover bg-right'>
+      <div className='relative w-dvw h-dvh bg-[url(/galaxy.jpg)] bg-cover bg-center'>
         <div className="absolute inset-0 bg-black/60 z-0"></div>
 
         <div className='relative z-10 flex flex-col items-start justify-center h-full space-y-4 px-16'>
