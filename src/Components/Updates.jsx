@@ -1,52 +1,41 @@
 import { useEffect, useState } from "react";
 
 export default function Updates() {
-     const [articles, setArticles] = useState([]);
+    const [articles, setArticles] = useState([]);
 
-  useEffect(() => {
-    fetch("https://api.spaceflightnewsapi.net/v4/articles/?limit=4")
-      .then(res => res.json())
-      .then(data => setArticles(data.results))
-      .catch(err => console.error("Error fetching space news:", err));
-  }, []);
-  return (
-   <section className="mt-16 px-6 w-dvw h-dvh">
-      <h2 className="text-3xl font-semibold text-white mb-6">🛰️ Latest Space News</h2>
+    useEffect(() => {
+        fetch("https://api.spaceflightnewsapi.net/v4/articles/?limit=4")
+            .then(res => res.json())
+            .then(data => setArticles(data.results))
+            .catch(err => console.error("Error fetching space news:", err));
+    }, []);
+    return (
+        <section className="py-18 px-20 min-w-dvw min-h-dvh bg-gray-100">
+            <h2 className="text-4xl leading-2 font-semibold mt-4 mb-16 text-center">Latest Space News</h2>
 
-      <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-        {articles.map(article => (
-          <a
-  href={article.url}
-  target="_blank"
-  rel="noopener noreferrer"
-  className="group relative rounded-xl overflow-hidden shadow-md bg-gray-900 hover:bg-gray-800 transition duration-300 flex flex-col"
->
-  {/* Image */}
-  <img
-    src={article.image_url}
-    alt={article.title}
-    className="w-full h-44 object-cover group-hover:scale-105 transition-transform duration-300"
-  />
+            <div className="grid grid-cols-2 gap-6">
+                {articles.map(article => (
+                    <a key={article.id} href={article.url} target="_blank" rel="noopener noreferrer"
+                        className="hover:scale-105 flex bg-white border border-gray-200 rounded-xl shadow-sm hover:shadow-md transition-all duration-300 overflow-hidden">
+                        <div className="w-1/3 min-w-[120px]">
+                            <img src={article.image_url} alt={article.title} className="w-full h-full object-cover transition-transform duration-300"/>
+                        </div>
+                        <div className="p-4 flex flex-col justify-between w-2/3 text-left">
+                            <div className="text-xs text-gray-400 mb-1">
+                                {new Date(article.published_at).toLocaleDateString("en-US", {
+                                    day: "numeric",
+                                    month: "short",
+                                    year: "numeric",
+                                })}
+                            </div>
+                            <h3 className="text-base font-semibold text-gray-800 group-hover:text-blue-600 leading-snug mb-2">{article.title}</h3>
+                            <p className="text-sm text-gray-500 line-clamp-3">{article.summary}</p>
+                            <div className="mt-3 text-xs text-blue-500 font-medium">{article.news_site}</div>
+                        </div>
+                    </a>
 
-  {/* Content */}
-  <div className="p-4 flex flex-col flex-1 justify-between text-white">
-    <h3 className="text-lg font-semibold mb-2 group-hover:text-[#66b2ff] transition">
-      {article.title}
-    </h3>
-
-    <p className="text-sm text-gray-400 line-clamp-3 mb-4">
-      {article.summary}
-    </p>
-
-    <div className="flex items-center justify-between text-xs text-gray-500 mt-auto">
-      <span>{new Date(article.published_at).toLocaleDateString()}</span>
-      <span className="italic opacity-60">Source: {article.news_site}</span>
-    </div>
-  </div>
-</a>
-
-        ))}
-      </div>
-    </section>
-  )
+                ))}
+            </div>
+        </section>
+    )
 }

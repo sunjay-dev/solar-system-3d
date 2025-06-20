@@ -1,5 +1,5 @@
 import React from 'react'
-import {Header, Planets, Updates} from '../Components';
+import {Header, Planets, Updates, Footer} from '../Components';
 import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
 
 export default function Home() {
@@ -21,6 +21,7 @@ export default function Home() {
       </div>
       <Planets/>
       <Updates />
+    <Footer />
     </div>
   )
 }
