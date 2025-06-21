@@ -1,4 +1,3 @@
-import React from 'react'
 import PlanetSlider from './PlanetSlider'
 import InfoOutlineIcon from '@mui/icons-material/InfoOutline';
 

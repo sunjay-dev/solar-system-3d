@@ -13,7 +13,7 @@ export default function Updates() {
         <section className="py-18 px-8 md:px-20 min-w-dvw min-h-dvh" id="updates">
             <h2 className="text-4xl leading-2 font-semibold mt-4 mb-16 text-center">Latest Space News</h2>
 
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 space-y-2">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
                 {articles.map(article => (
                     <a key={article.id} href={article.url} target="_blank" rel="noopener noreferrer"
                         className="hover:scale-105 flex flex-col sm:flex-row bg-white dark:bg-[#212528] rounded-xl shadow-sm hover:shadow-md transition-all duration-300 overflow-hidden">

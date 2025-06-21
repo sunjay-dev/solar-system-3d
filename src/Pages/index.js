@@ -1,2 +1,3 @@
 import Home from './Home'
-export {Home}
+import Planet from './Planet'
+export {Home, Planet}

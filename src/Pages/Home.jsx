@@ -1,5 +1,4 @@
-import React from 'react'
-import {Header, Planets, Updates, Subscribe,Footer} from '../Components';
+import {Header, Planets, Updates, Subscribe,Footer} from '../Components/Home-Components';
 import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
 
 export default function Home() {
