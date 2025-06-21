@@ -1,12 +1,11 @@
-import { Home, Planet } from "./Pages"
+import { Home, Viewer } from "./Pages"
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 function App() {
-
   return (
    <Router>
    <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/planet/" element={<Planet />} />
+        <Route path="/viewer" element={<Viewer />} />
       </Routes>
    </Router>
   )
