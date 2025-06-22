@@ -2,46 +2,46 @@
   "planets": [
     {
       "name": "Mercury",
-      "texture": "textures/mercury/color.jpg",
-      "bump": "textures/mercury/bump.jpg",
+      "texture": "/textures/mercury/color.jpg",
+      "bump": "/textures/mercury/bump.jpg",
       "bumpScale": 0.03
     },
     {
       "name": "Venus",
-      "texture": "textures/venus/color.jpg",
-      "bump": "textures/venus/bump.jpg",
+      "texture": "/textures/venus/color.jpg",
+      "bump": "/textures/venus/bump.jpg",
       "bumpScale": 0.04
     },
     {
       "name": "Earth",
-      "texture": "textures/earth/color.jpg",
-      "bump": "textures/earth/bump.jpg",
+      "texture": "/textures/earth/color.jpg",
+      "bump": "/textures/earth/bump.jpg",
       "bumpScale": 0.08,
-      "normal": "textures/earth/normal.jpg"
+      "normal": "/textures/earth/normal.jpg"
     },
     {
       "name": "Mars",
-      "texture": "textures/mars/color.jpg",
-      "bump": "textures/mars/bump.jpg",
+      "texture": "/textures/mars/color.jpg",
+      "bump": "/textures/mars/bump.jpg",
       "bumpScale": 0.06,
-      "normal": "textures/mars/normal.jpg"
+      "normal": "/textures/mars/normal.jpg"
     },
     {
       "name": "Jupiter",
-      "texture": "textures/jupiter/color.jpg"
+      "texture": "/textures/jupiter/color.jpg"
     },
     {
       "name": "Saturn",
-      "texture": "textures/saturn/color.jpg",
-      "ringTexture": "textures/saturn/rings.png"
+      "texture": "/textures/saturn/color.jpg",
+      "ringTexture": "/textures/saturn/rings.png"
     },
     {
       "name": "Uranus",
-      "texture": "textures/uranus/color.jpg"
+      "texture": "/textures/uranus/color.jpg"
     },
     {
       "name": "Neptune",
-      "texture": "textures/neptune/color.jpg"
+      "texture": "/textures/neptune/color.jpg"
     }
   ]
 }

@@ -5,7 +5,7 @@ function App() {
    <Router>
    <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/viewer" element={<Viewer />} />
+        <Route path="/viewer/:planet" element={<Viewer />} />
       </Routes>
    </Router>
   )
