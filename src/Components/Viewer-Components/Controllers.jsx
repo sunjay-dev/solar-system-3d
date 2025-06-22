@@ -26,7 +26,7 @@ export default function Controllers({setCurrent}) {
                         <img
                             src={p.texture}
                             alt={p.name}
-                            className="w-6 h-6 rounded-full object-cover cursor-pointer"
+                            className="w-6 h-6 rounded-full object-cover cursor-pointer active:scale-[1.02] hover:scale-[1.1]"
                             onClick={() => setCurrent(index)}
                         />
                         </Tooltip> 

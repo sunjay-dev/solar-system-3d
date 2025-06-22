@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 import planets from '../../Data/planets.json';
 import KeyboardArrowLeftIcon from '@mui/icons-material/KeyboardArrowLeft';
 import KeyboardArrowRightIcon from '@mui/icons-material/KeyboardArrowRight';
-
+import ArrowOutwardIcon from '@mui/icons-material/ArrowOutward';
 export default function PlanetSlider() {
     const scrollRef = useRef();
     const [scrollProgress, setScrollProgress] = useState(0);
@@ -37,8 +37,8 @@ export default function PlanetSlider() {
                                 <p className={`text-lg mt-4 ${planet.color}`}>{planet.order}</p>
                                 <p className='text-3xl font-light mt-20'>{planet.name}</p>
                                 <p className="text-sm text-gray-500 mt-3">{planet.description}</p>
-                                <button className="absolute bottom-0 right-0 bg-white text-black p-2 hover:bg-gray-200">
-                                    <svg className="w-5 h-5" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
+                                <button onClick={() => window.open(`/viewer/${planet.name.toLowerCase()}`, '_blank')} className="absolute group bottom-0 right-0 bg-white text-black p-2 hover:bg-gray-200">
+                                    <svg className="transform transition-transform duration-200 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 w-5 h-5" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
                                         <path strokeLinecap="round" strokeLinejoin="round" d="M17 7l-10 10m0-10h10v10" />
                                     </svg>
                                 </button>
