@@ -5,7 +5,7 @@ export default function ResponsiveCamera() {
   const { camera } = useThree();
 
   useEffect(() => {
-    const handleCameraResize = () => window.innerWidth < 640 ? camera.position.set(0, 0, 7) : camera.position.set(0, 0, 5.5);
+    const handleCameraResize = () => window.innerWidth < 640 ? camera.position.set(3, 0, 7) : camera.position.set(3, 0, 5.5);
 
     handleCameraResize(); 
     window.addEventListener('resize', handleCameraResize);
