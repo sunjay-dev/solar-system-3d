@@ -3,7 +3,7 @@ export default function Subscribe() {
   return (
     <section className="bg-gray-100 dark:bg-gray-900 py-16 px-6 mt-16" id='subscribe'>
   <div className="max-w-3xl mx-auto text-center space-y-2">
-    <h2 className="text-3xl flex gap-2 items-center justify-center font-semibold text-gray-800 dark:text-white">
+    <h2 className="sm:text-3xl text-2xl flex gap-2 items-center justify-center font-semibold text-gray-800 dark:text-white">
     <RocketLaunchIcon fontSize='large' /> Stay in the Cosmic Loop
     </h2>
     <p className="mt-2 text-sm text-gray-600 px-8 dark:text-gray-400">

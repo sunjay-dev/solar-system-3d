@@ -21,7 +21,7 @@
     "order": "// 03",
     "color": "text-blue-400",
     "description": "The only known planet to support life and liquid water.",
-    "image": "/planets/earth.png"
+    "image": "/planets/earth.webp"
   },
   {
     "id": 4,
@@ -29,7 +29,7 @@
     "order": "// 04",
     "color": "text-red-400",
     "description": "Called the Red Planet, home to the solar system’s tallest volcano.",
-    "image": "/planets/mars.png"
+    "image": "/planets/mars.webp"
   },
   {
     "id": 5,
@@ -37,7 +37,7 @@
     "order": "// 05",
     "color": "text-yellow-500",
     "description": "The largest planet with strong gravity and over 70 moons.",
-    "image": "/planets/jupiter.png"
+    "image": "/planets/jupiter.webp"
   },
   {
     "id": 6,
@@ -45,7 +45,7 @@
     "order": "// 06",
     "color": "text-amber-400",
     "description": "Known for its iconic rings, Saturn is a giant made of gas.",
-    "image": "/planets/saturn.png"
+    "image": "/planets/saturn.webp"
   },
   {
     "id": 7,
@@ -53,7 +53,7 @@
     "order": "// 07",
     "color": "text-cyan-400",
     "description": "Pale blue ice giant that spins on its side with faint rings.",
-    "image": "/planets/uranus.png"
+    "image": "/planets/uranus.webp"
   },
   {
     "id": 8,
@@ -61,6 +61,6 @@
     "order": "// 08",
     "color": "text-indigo-400",
     "description": "Deep blue planet with strong winds, farthest from the Sun.",
-    "image": "/planets/neptune.png"
+    "image": "/planets/neptune.webp"
   }
 ]

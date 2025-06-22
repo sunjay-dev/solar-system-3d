@@ -1,23 +1,20 @@
 /* eslint-disable react-hooks/rules-of-hooks */
-import { useRef } from 'react'
+import { useRef, useState, useMemo } from 'react'
+import { useCursor } from '@react-three/drei';
 import { useLoader, useFrame } from '@react-three/fiber'
 import { TextureLoader } from 'three/src/loaders/TextureLoader'
-import { useMemo } from 'react';
+import * as THREE from 'three';
 
 export default function PlanetMash({ colorMapPath, bumpMapPath, bumpScale, normalMapPath }) {
     const planetRef = useRef();
 
-    const colorMap = useMemo(() => {
-        return useLoader(TextureLoader, colorMapPath)
-    }, [colorMapPath])
-
-    const bumpMap = useMemo(() => {
-        return bumpMapPath ? useLoader(TextureLoader, bumpMapPath) : null;
-    }, [bumpMapPath])
-
-    const normalMap = useMemo(() => {
-        return normalMapPath ? useLoader(TextureLoader, normalMapPath) : null;
-    }, [normalMapPath])
+    const [hovered, setHovered] = useState(false);
+    useCursor(hovered);
+    
+    const colorMap = useMemo(()=> useLoader(TextureLoader, colorMapPath), [colorMapPath]);
+    // colorMap.encoding = THREE.sRGBEncoding;
+    const bumpMap = useMemo(()=> bumpMapPath? useLoader(TextureLoader, bumpMapPath) : null, [bumpMapPath])
+    const normalMap = useMemo(()=> normalMapPath? useLoader(TextureLoader, normalMapPath) : null, [normalMapPath])
 
     useFrame(() => {
         if (planetRef.current) {
@@ -25,7 +22,7 @@ export default function PlanetMash({ colorMapPath, bumpMapPath, bumpScale, norma
         }
     })
     return (
-        <mesh ref={planetRef}>
+        <mesh ref={planetRef} onPointerOver={() => setHovered(true)} onPointerOut={() => setHovered(false)}>
             <sphereGeometry args={[2.2, 64, 64]} />
             <meshStandardMaterial
                 map={colorMap}

@@ -14,13 +14,13 @@ export default function Header() {
     <a href='#updates'className='font-normal'>Updates</a>
     <a href='#subscribe' className='font-normal'>subscribe</a>
     </div>
-    <button className='md:hidden'><MenuIcon/></button>
+    <button className='md:hidden' aria-label="Open Menu"><MenuIcon/></button>
     <div className='flex items-center justify-between space-x-4'>
     <div onClick={() => toggleMode()}>
-    <button className="hidden dark:block"><LightModeIcon fontSize='small' /></button>
-    <button className="dark:hidden block"><DarkModeIcon fontSize='small'  /></button>
+    <button className="hidden dark:block" aria-label="Turn on Light Mode"><LightModeIcon fontSize='small' /></button>
+    <button className="dark:hidden block" aria-label="Turn on Dark Mode"><DarkModeIcon fontSize='small'  /></button>
     </div>
-    <button className='px-3 py-2 bg-[#2662EC] text-white rounded-sm'>Contact Us</button>
+    <button onClick={()=> window.open('/viewer/earth', '_blank')} className='px-3 py-2 bg-[#2662EC] text-white rounded-sm'>SolarVerse 3D</button>
     </div>
     </div>
   )

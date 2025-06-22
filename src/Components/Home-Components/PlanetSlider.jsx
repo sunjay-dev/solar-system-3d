@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 import planets from '../../Data/planets.json';
 import KeyboardArrowLeftIcon from '@mui/icons-material/KeyboardArrowLeft';
 import KeyboardArrowRightIcon from '@mui/icons-material/KeyboardArrowRight';
-import ArrowOutwardIcon from '@mui/icons-material/ArrowOutward';
+
 export default function PlanetSlider() {
     const scrollRef = useRef();
     const [scrollProgress, setScrollProgress] = useState(0);
@@ -33,12 +33,12 @@ export default function PlanetSlider() {
                         return (
                             <div key={planet.id} className='p-6 w-80 bg-gray-100 dark:bg-[#212528] relative overflow-hidden'>
                                 <div className="absolute top-0 left-0 w-0 h-0 border-t-[40px] border-r-[40px] border-t-gray-50 border-r-gray-100 dark:border-t-gray-900 dark:border-r-[#212528]"></div>
-                                <img src={planet.image} className='absolute -top-24 -right-22 w-66 h-66' />
+                                <img loading="lazy" src={planet.image} alt={planet.name} className='absolute -top-24 -right-22 w-66 h-66' />
                                 <p className={`text-lg mt-4 ${planet.color}`}>{planet.order}</p>
                                 <p className='text-3xl font-light mt-20'>{planet.name}</p>
                                 <p className="text-sm text-gray-500 mt-3">{planet.description}</p>
-                                <button onClick={() => window.open(`/viewer/${planet.name.toLowerCase()}`, '_blank')} className="absolute group bottom-0 right-0 bg-white text-black p-2 hover:bg-gray-200">
-                                    <svg className="transform transition-transform duration-200 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 w-5 h-5" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
+                                <button aria-label="view planet in 3d" onClick={() => window.open(`/viewer/${planet.name.toLowerCase()}`, '_blank')} className="absolute group bottom-0 right-0 bg-white text-black p-2 hover:bg-gray-200">
+                                    <svg className="transform transition-transform duration-200 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 group-active:translate-x-0.5 group-active:-translate-y-0.5" width='20' height='20' fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
                                         <path strokeLinecap="round" strokeLinejoin="round" d="M17 7l-10 10m0-10h10v10" />
                                     </svg>
                                 </button>
@@ -51,34 +51,23 @@ export default function PlanetSlider() {
 
             <div className="flex items-center justify-between w-full mt-12 px-4">
                 <div className="relative flex-1 h-[2px] bg-gray-300 md:max-w-xl rounded-full overflow-hidden">
-                    <motion.div
-                        className="absolute top-0 left-0 h-full bg-gray-500 rounded-full"
+                    <motion.div className="absolute top-0 left-0 h-full bg-gray-500 rounded-full"
                         style={{ width: `${scrollProgress * 100}%` }}
-                        transition={{ type: "spring", stiffness: 150, damping: 20 }}
-                    />
+                        transition={{ type: "spring", stiffness: 150, damping: 20 }} />
                 </div>
-
-                {/* Arrows */}
                 <div className="space-x-3 sm:ml-0 ml-2">
                     <button
-                        onClick={() => {
-                            scrollRef.current.scrollBy({ left: -300, behavior: "smooth" });
-                        }}
-                        className="hover:text-[#2662EC] transition"
-                    >
+                        onClick={() => { scrollRef.current.scrollBy({ left: -300, behavior: "smooth" }); }}
+                        aria-label="swap back" className="hover:text-[#2662EC] transition">
                         <KeyboardArrowLeftIcon fontSize="medium" />
                     </button>
                     <button
-                        onClick={() => {
-                            scrollRef.current.scrollBy({ left: 300, behavior: "smooth" });
-                        }}
-                        className="hover:text-[#2662EC] transition"
-                    >
+                        onClick={() => { scrollRef.current.scrollBy({ left: 300, behavior: "smooth" }); }}
+                        aria-label="swap ahead" className="hover:text-[#2662EC] transition">
                         <KeyboardArrowRightIcon fontSize="medium" />
                     </button>
                 </div>
             </div>
-
         </>
     )
 }
