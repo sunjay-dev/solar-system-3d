@@ -1,11 +1,11 @@
-import { Canvas, useLoader } from '@react-three/fiber';
+import { Canvas, useLoader} from '@react-three/fiber';
 import * as THREE from 'three';
 import { OrbitControls } from '@react-three/drei';
-import { useState } from 'react';
+import { useState} from 'react';
 import texture from '../Data/texture.json';
 import {PlanetMash, Controllers} from '../Components/Viewer-Components';
 import { useParams } from 'react-router-dom';
-
+import ResponsiveCamera from '../Hooks/ResponsiveCamera';
 
 export default function Viewer() {
   const { planet } = useParams();
@@ -16,13 +16,15 @@ export default function Viewer() {
 
   const [current, setCurrent] = useState(currentPlanetIndex === -1?  2 : currentPlanetIndex);
   const starTexture = useLoader(THREE.TextureLoader, '/textures/star.jpg');
+  const [isNotMobile] = useState(()=> window.innerWidth > 640);
+
   return (
     <div className="relative w-dvw h-dvh overflow-hidden bg-gray-900 text-white">
-      
       <div className='absolute z-10 h-full w-full inset-0'>
 
-        <Canvas camera={{ position: [0, 0, 5] }}>
-          <OrbitControls />
+        <Canvas>
+          <ResponsiveCamera/>
+          <OrbitControls enablePan={isNotMobile} />
           <color attach="background" args={['black']} />
           <primitive attach="background" object={starTexture} />
           <ambientLight intensity={0.3} color={0x8888aa} />
@@ -37,7 +39,7 @@ export default function Viewer() {
 
         </Canvas>
 
-        <Controllers setCurrent={setCurrent} />
+        <Controllers setCurrent={setCurrent} current={current} />
       </div>
     </div>
   );
