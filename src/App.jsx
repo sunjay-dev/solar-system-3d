@@ -1,6 +1,6 @@
 import { Home, Viewer } from "./Pages"
 import { BrowserRouter as Router, Routes, Route, Navigate  } from 'react-router-dom';
-function App() {
+export default function App() {
   return (
    <Router>
    <Routes>
@@ -11,5 +11,3 @@ function App() {
    </Router>
   )
 }
-
-export default App

@@ -1,4 +1,4 @@
-import {Header, Planets, Updates, Subscribe,Footer} from '../Components/Home-Components';
+import {Header, Planets, Updates, Subscribe,Footer} from '../Components/home';
 import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
 
 export default function Home() {

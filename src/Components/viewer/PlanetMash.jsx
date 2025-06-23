@@ -3,7 +3,6 @@ import { useRef, useState, useMemo } from 'react'
 import { useCursor } from '@react-three/drei';
 import { useLoader, useFrame } from '@react-three/fiber'
 import { TextureLoader } from 'three/src/loaders/TextureLoader'
-import * as THREE from 'three';
 
 export default function PlanetMash({ colorMapPath, bumpMapPath, bumpScale, normalMapPath }) {
     const planetRef = useRef();
@@ -12,7 +11,6 @@ export default function PlanetMash({ colorMapPath, bumpMapPath, bumpScale, norma
     useCursor(hovered);
     
     const colorMap = useMemo(()=> useLoader(TextureLoader, colorMapPath), [colorMapPath]);
-    // colorMap.encoding = THREE.sRGBEncoding;
     const bumpMap = useMemo(()=> bumpMapPath? useLoader(TextureLoader, bumpMapPath) : null, [bumpMapPath])
     const normalMap = useMemo(()=> normalMapPath? useLoader(TextureLoader, normalMapPath) : null, [normalMapPath])
 

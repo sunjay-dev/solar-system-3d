@@ -33,11 +33,16 @@
     {
       "name": "Saturn",
       "texture": "/textures/saturn/color.jpg",
-      "ringTexture": "/textures/saturn/rings.png"
+      "hasRing": true,
+      "ringTexture": "/textures/saturn/rings.jpg",
+      "ringAlpha": "/textures/saturn/ringpattern.gif"
     },
     {
       "name": "Uranus",
-      "texture": "/textures/uranus/color.jpg"
+      "texture": "/textures/uranus/color.jpg",
+      "hasRing": true,
+      "ringTexture": "/textures/uranus/rings.jpg",
+      "ringAlpha": "/textures/uranus/ringpattern.gif"
     },
     {
       "name": "Neptune",
