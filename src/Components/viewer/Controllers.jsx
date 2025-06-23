@@ -27,12 +27,13 @@ export default function Controllers({ setCurrent, current, isNotMobile }) {
                         <div key={index}
                             className={`${isCurrent ? 'flex' : 'hidden'} sm:flex sm:px-0 px-3 items-center gap-2.5`} >
                             <Tooltip title={p.name}>
+                                {(isCurrent || isNotMobile) &&
                                 <img
-                                    src={isCurrent || isNotMobile ? p.texture : undefined}
+                                    src={p.texture}
                                     alt={p.name}
                                     onClick={() => setCurrent(index)}
                                     className="sm:w-7 sm:h-7 w-8.5 h-8.5 rounded-full object-cover cursor-pointer active:scale-[1.02] hover:scale-[1.1]"
-                                />
+                                /> }
                             </Tooltip>
                             <span className="text-lg font-medium text-white sm:hidden tracking-wide">{p.name}</span>
                         </div>

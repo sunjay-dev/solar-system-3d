@@ -3,7 +3,7 @@ import * as THREE from 'three';
 import { OrbitControls } from '@react-three/drei';
 import { useState } from 'react';
 import texture from '../Data/texture.json';
-import { PlanetMash, Controllers, PlanetRing } from '../Components/viewer';
+import { PlanetMash, Controllers, PlanetRing, Information } from '../Components/viewer';
 import { useParams } from 'react-router-dom';
 import ResponsiveCamera from '../Hooks/ResponsiveCamera';
 
@@ -17,10 +17,10 @@ export default function Viewer() {
   const [current, setCurrent] = useState(currentPlanetIndex === -1 ? 2 : currentPlanetIndex);
   const starTexture = useLoader(THREE.TextureLoader, '/textures/star.jpg');
   const [isNotMobile] = useState(() => window.innerWidth > 640);
-
+  const [showInfo, setShowInfo] = useState(false);
   return (
     <div className="relative w-dvw h-dvh overflow-hidden bg-gray-900 text-white">
-      <div onClick={() => window.location.href = '/'} className='top-6 left-6 z-30 absolute cursor-pointer'>
+      <div onClick={() => window.location.href = '/'} className={`top-6 left-6 z-30 absolute cursor-pointer ${showInfo?  'hidden': ''}`}>
         <img src='/logo-white.webp' alt="logo" className='h-12 w-auto max-w-[200px]' />
       </div>
       <div className='absolute z-10 h-full w-full inset-0'>
@@ -47,12 +47,14 @@ export default function Viewer() {
             normalMapPath={texture.planets[current].normal}
           />
           {texture.planets[current].hasRing &&
-          <PlanetRing
-            texturePath={texture.planets[current].ringTexture}
-            transparencyMap={texture.planets[current].ringAlpha}
-          />
+            <PlanetRing
+              texturePath={texture.planets[current].ringTexture}
+              transparencyMap={texture.planets[current].ringAlpha}
+            />
           }
         </Canvas>
+
+        <Information currentPlanet={texture.planets[current]} showInfo={showInfo} setShowInfo={setShowInfo} />
 
         <Controllers setCurrent={setCurrent} current={current} isNotMobile={isNotMobile} />
       </div>

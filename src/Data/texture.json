@@ -4,49 +4,89 @@
       "name": "Mercury",
       "texture": "/textures/mercury/color.jpg",
       "bump": "/textures/mercury/bump.jpg",
-      "bumpScale": 0.03
+      "bumpScale": 0.03,
+      "description": "Mercury is the closest planet to the Sun and the smallest in the solar system.",
+      "moons": 0,
+      "orbit": "88 Earth days",
+      "radius": "2,439.7 km",
+      "tagline": "Closest to the Sun"
     },
     {
       "name": "Venus",
       "texture": "/textures/venus/color.jpg",
       "bump": "/textures/venus/bump.jpg",
-      "bumpScale": 0.04
+      "bumpScale": 0.04,
+      "description": "Venus is shrouded in thick clouds and is the hottest planet due to a runaway greenhouse effect.",
+      "moons": 0,
+      "orbit": "225 Earth days",
+      "radius": "6,051.8 km",
+      "tagline": "Earth’s twin in disguise"
     },
     {
       "name": "Earth",
       "texture": "/textures/earth/color.jpg",
       "bump": "/textures/earth/bump.jpg",
       "bumpScale": 0.08,
-      "normal": "/textures/earth/normal.jpg"
+      "normal": "/textures/earth/normal.jpg",
+      "description": "Earth is the only known planet to support life, with abundant water and a breathable atmosphere.",
+      "moons": 1,
+      "orbit": "365.25 days",
+      "radius": "6,371 km",
+      "tagline": "Our home planet"
     },
     {
       "name": "Mars",
       "texture": "/textures/mars/color.jpg",
       "bump": "/textures/mars/bump.jpg",
       "bumpScale": 0.06,
-      "normal": "/textures/mars/normal.jpg"
+      "normal": "/textures/mars/normal.jpg",
+      "description": "Mars is known as the Red Planet and has the tallest volcano in the solar system.",
+      "moons": 2,
+      "orbit": "687 Earth days",
+      "radius": "3,389.5 km",
+      "tagline": "The Red Planet"
     },
     {
       "name": "Jupiter",
-      "texture": "/textures/jupiter/color.jpg"
+      "texture": "/textures/jupiter/color.jpg",
+      "description": "Jupiter is the largest planet in the solar system with dozens of moons and a giant storm.",
+      "moons": 95,
+      "orbit": "11.9 Earth years",
+      "radius": "69,911 km",
+      "tagline": "King of the planets"
     },
     {
       "name": "Saturn",
       "texture": "/textures/saturn/color.jpg",
       "hasRing": true,
       "ringTexture": "/textures/saturn/rings.jpg",
-      "ringAlpha": "/textures/saturn/ringpattern.gif"
+      "ringAlpha": "/textures/saturn/ringpattern.gif",
+      "description": "Saturn is famous for its bright ring system and is the second largest planet.",
+      "moons": 145,
+      "orbit": "29.5 Earth years",
+      "radius": "58,232 km",
+      "tagline": "The ringed giant"
     },
     {
       "name": "Uranus",
       "texture": "/textures/uranus/color.jpg",
       "hasRing": true,
       "ringTexture": "/textures/uranus/rings.jpg",
-      "ringAlpha": "/textures/uranus/ringpattern.gif"
+      "ringAlpha": "/textures/uranus/ringpattern.gif",
+      "description": "Uranus is an ice giant with a unique sideways rotation and faint rings.",
+      "moons": 27,
+      "orbit": "84 Earth years",
+      "radius": "25,362 km",
+      "tagline": "The tilted planet"
     },
     {
       "name": "Neptune",
-      "texture": "/textures/neptune/color.jpg"
+      "texture": "/textures/neptune/color.jpg",
+      "description": "Neptune is a deep blue ice giant with the strongest winds in the solar system.",
+      "moons": 14,
+      "orbit": "165 Earth years",
+      "radius": "24,622 km",
+      "tagline": "The windy blue world"
     }
   ]
 }
