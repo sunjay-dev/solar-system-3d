@@ -1,8 +1,17 @@
+import { Helmet } from 'react-helmet-async';
 import {Header, Planets, Updates, Subscribe,Footer} from '../Components/home';
 import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
 
 export default function Home() {
   return (
+    <>
+    <Helmet>
+        <title>SolarVerse</title>
+        <meta
+          name="description"
+          content="Welcome to SolarVerse – Discover planets, read space news, and begin your 3D journey through the cosmos."
+        />
+      </Helmet>
     <div className="font-[Inter] dark:selection:text-black selection:text-white selection:bg-gray-900 dark:selection:bg-white bg-gray-50 dark:bg-gray-900 dark:text-white text-black overflow-x-hidden">
       <Header />
       <div className='relative w-dvw h-screen bg-[url(/galaxy.webp)] bg-cover bg-center' id='home'>
@@ -23,5 +32,6 @@ export default function Home() {
       <Subscribe />
     <Footer />
     </div>
+    </>
   )
 }
