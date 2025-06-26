@@ -14,7 +14,7 @@ export default function Controllers({ setCurrent, current, isNotMobile }) {
             </svg>
             <Tooltip title="previous">
                 <div onClick={handlePrev} className="sm:p-2 p-3 cursor-pointer border border-[#335775] backdrop-blur-md rounded-md">
-                    <button className="text-white hover:brightness-150">
+                    <button aria-label='Previous Planet' className="text-white hover:brightness-150">
                         <PlayArrowIcon className="rotate-180" />
                     </button>
                 </div>
@@ -42,7 +42,7 @@ export default function Controllers({ setCurrent, current, isNotMobile }) {
             </div>
             <Tooltip title="next">
                 <div onClick={handleNext} className="sm:p-2 p-3 cursor-pointer border border-[#335775] backdrop-blur-md rounded-md">
-                    <button className="text-white hover:brightness-150">
+                    <button aria-label='Next Planet' className="text-white hover:brightness-150">
                         <PlayArrowIcon />
                     </button>
                 </div>

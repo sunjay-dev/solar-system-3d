@@ -4,7 +4,7 @@ export default function Information({ currentPlanet, showInfo, setShowInfo }) {
 
     return (
         <>
-            <button onClick={() => setShowInfo(true)}
+            <button aria-label="open Information section" onClick={() => setShowInfo(true)}
                 className="fixed top-28 left-0 z-40 bg-white hover:bg-gray-100 px-1 py-4 rounded-r-md" >
                 <MenuIcon className="text-black transform rotate-90" fontSize="medium" />
             </button>
@@ -13,7 +13,7 @@ export default function Information({ currentPlanet, showInfo, setShowInfo }) {
                 <div className="fixed top-0 left-0 z-50 h-dvh w-[320px] bg-white text-black  transition-transform duration-300 overflow-y-auto">
                     <div className="flex justify-between items-center px-4 py-3 border-b border-gray-200">
                         <h2 className="text-xl font-semibold tracking-wide">{currentPlanet.name}</h2>
-                        <button onClick={() => setShowInfo(false)} className="hover:scale-[1.1] active:scale-[1.1]">
+                        <button aria-label='close Information section' onClick={() => setShowInfo(false)} className="hover:scale-[1.1] active:scale-[1.1]">
                             <CloseIcon />
                         </button>
                     </div>
