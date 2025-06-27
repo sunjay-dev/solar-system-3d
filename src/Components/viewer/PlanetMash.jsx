@@ -4,15 +4,18 @@ import { useCursor } from '@react-three/drei';
 import { useLoader, useFrame } from '@react-three/fiber'
 import { TextureLoader } from 'three/src/loaders/TextureLoader'
 
-export default function PlanetMash({ colorMapPath, bumpMapPath, bumpScale, normalMapPath }) {
+export default function PlanetMash({ colorMapPath, bumpMapPath, bumpScale, normalMapPath, setLoading }) {
     const planetRef = useRef();
 
     const [hovered, setHovered] = useState(false);
     useCursor(hovered);
-    
-    const colorMap = useMemo(()=> useLoader(TextureLoader, colorMapPath), [colorMapPath]);
-    const bumpMap = useMemo(()=> bumpMapPath? useLoader(TextureLoader, bumpMapPath) : null, [bumpMapPath])
-    const normalMap = useMemo(()=> normalMapPath? useLoader(TextureLoader, normalMapPath) : null, [normalMapPath])
+
+    const colorMap = useLoader(TextureLoader, colorMapPath, (loader) => {
+        loader.manager.onLoad = () => setLoading(false);
+    });
+
+    const bumpMap = useMemo(()=> bumpMapPath ? useLoader(TextureLoader, bumpMapPath) : null, [bumpMapPath]) 
+    const normalMap = useMemo(()=> normalMapPath ? useLoader(TextureLoader, normalMapPath) : null, [normalMapPath]) 
 
     useFrame(() => {
         if (planetRef.current) {
